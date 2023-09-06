@@ -264,7 +264,7 @@ export class Dashboard extends Component {
   render() {
     return (
       <div>
-        <div className="proBanner">
+        {/* <div className="proBanner">
           <div>
             <span className="d-flex align-items-center purchase-popup">
               <p>Get tons of UI components, Plugins, multiple layouts, 20+ sample pages, and more!</p>
@@ -272,7 +272,7 @@ export class Dashboard extends Component {
               <i className="mdi mdi-close bannerClose" onClick={this.toggleProBanner}></i>
             </span>
           </div>
-        </div>
+        </div> */}
         <div className="page-header">
           <h3 className="page-title">
             <span className="page-title-icon bg-gradient-primary text-white mr-2">
@@ -317,7 +317,7 @@ export class Dashboard extends Component {
               </div>
             </div>
           </div>
-          
+
           <div className="col-md-3 stretch-card grid-margin">
             <div className="card card-img-holder text-black">
               <div className="card-body">
@@ -361,7 +361,7 @@ export class Dashboard extends Component {
               </div>
             </div>
           </div>
-          
+
           <div className="col-md-3 stretch-card grid-margin">
             <div className="card card-img-holder text-black">
               <div className="card-body">
