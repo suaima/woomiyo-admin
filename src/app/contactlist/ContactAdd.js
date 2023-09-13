@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { ProgressBar } from 'react-bootstrap';
-import ContactAddTable from './ContactAddTable';
+// import ContactAddTable from './ContactAddTable';
 
 export class ContactAdd extends Component {
     render() {

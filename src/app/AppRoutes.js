@@ -4,47 +4,47 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Spinner from '../app/shared/Spinner';
 
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
-
-const Callback = lazy(() => import('./callback/Callback'));
-
-const Voicemail = lazy(() => import('./voicemail/Voicemail'));
 const ContactList = lazy(() => import('./contactlist/ContactList'));
-const ContactAdd = lazy(() => import('./contactlist/ContactAdd'));
 
-const Parkedcall = lazy(() => import('./parkedcalls/Parkedcall'));
-const Ticket = lazy(() => import('./tickets/Ticket'));
+// const Callback = lazy(() => import('./callback/Callback'));
 
-const Recording = lazy(() => import('./recordings/Recording'));
+// const Voicemail = lazy(() => import('./voicemail/Voicemail'));
+// const ContactAdd = lazy(() => import('./contactlist/ContactAdd'));
 
-const QualityFeedback = lazy(() => import('./quality-feedback/QualityFeedback'));
+// const Parkedcall = lazy(() => import('./parkedcalls/Parkedcall'));
+// const Ticket = lazy(() => import('./tickets/Ticket'));
 
+// const Recording = lazy(() => import('./recordings/Recording'));
 
-
-const Buttons = lazy(() => import('./basic-ui/Buttons'));
-const Dropdowns = lazy(() => import('./basic-ui/Dropdowns'));
-const Typography = lazy(() => import('./basic-ui/Typography'));
-
-
-const BasicElements = lazy(() => import('./form-elements/BasicElements'));
-
-const BasicTable = lazy(() => import('./tables/BasicTable'));
+// const QualityFeedback = lazy(() => import('./quality-feedback/QualityFeedback'));
 
 
 
+// const Buttons = lazy(() => import('./basic-ui/Buttons'));
+// const Dropdowns = lazy(() => import('./basic-ui/Dropdowns'));
+// const Typography = lazy(() => import('./basic-ui/Typography'));
 
-const Mdi = lazy(() => import('./icons/Mdi'));
+
+// const BasicElements = lazy(() => import('./form-elements/BasicElements'));
+
+// const BasicTable = lazy(() => import('./tables/BasicTable'));
 
 
-const ChartJs = lazy(() => import('./charts/ChartJs'));
 
-const Error404 = lazy(() => import('./error-pages/Error404'));
-const Error500 = lazy(() => import('./error-pages/Error500'));
 
-const Login = lazy(() => import('./user-pages/Login'));
-const Register1 = lazy(() => import('./user-pages/Register'));
-const Lockscreen = lazy(() => import('./user-pages/Lockscreen'));
+// const Mdi = lazy(() => import('./icons/Mdi'));
 
-const BlankPage = lazy(() => import('./general-pages/BlankPage'));
+
+// const ChartJs = lazy(() => import('./charts/ChartJs'));
+
+// const Error404 = lazy(() => import('./error-pages/Error404'));
+// const Error500 = lazy(() => import('./error-pages/Error500'));
+
+// const Login = lazy(() => import('./user-pages/Login'));
+// const Register1 = lazy(() => import('./user-pages/Register'));
+// const Lockscreen = lazy(() => import('./user-pages/Lockscreen'));
+
+// const BlankPage = lazy(() => import('./general-pages/BlankPage'));
 
 
 
@@ -55,10 +55,9 @@ class AppRoutes extends Component {
       <Suspense fallback={<Spinner />}>
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/callbacks" component={Callback} />
-          <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/contact-list" component={ContactList} />
-          <Route exact path="/contact-list/add" component={ContactAdd} />
+          {/* <Route exact path="/callbacks" component={Callback} />
+          <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />
 
           <Route exact path="/tikets" component={Ticket} />
@@ -90,7 +89,7 @@ class AppRoutes extends Component {
           <Route path="/error-pages/error-404" component={Error404} />
           <Route path="/error-pages/error-500" component={Error500} />
 
-          <Route path="/general-pages/blank-page" component={BlankPage} />
+          <Route path="/general-pages/blank-page" component={BlankPage} /> */}
 
 
           <Redirect to="/dashboard" />

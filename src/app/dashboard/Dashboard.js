@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { ProgressBar } from 'react-bootstrap';
+// import { ProgressBar } from 'react-bootstrap';
 import { Bar, Doughnut } from 'react-chartjs-2';
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 
 // import "react-datepicker/dist/react-datepicker.css";
 
@@ -429,20 +429,20 @@ export class Dashboard extends Component {
     );
   }
 }
-const ListItem = (props) => {
+// const ListItem = (props) => {
 
-  return (
-    <li className={(props.isCompleted ? 'completed' : null)}>
-      <div className="form-check">
-        <label htmlFor="" className="form-check-label">
-          <input className="checkbox" type="checkbox"
-            checked={props.isCompleted}
-            onChange={props.changed}
-          /> {props.children} <i className="input-helper"></i>
-        </label>
-      </div>
-      <i className="remove mdi mdi-close-circle-outline" onClick={props.remove}></i>
-    </li>
-  )
-};
+//   return (
+//     <li className={(props.isCompleted ? 'completed' : null)}>
+//       <div className="form-check">
+//         <label htmlFor="" className="form-check-label">
+//           <input className="checkbox" type="checkbox"
+//             checked={props.isCompleted}
+//             onChange={props.changed}
+//           /> {props.children} <i className="input-helper"></i>
+//         </label>
+//       </div>
+//       <i className="remove mdi mdi-close-circle-outline" onClick={props.remove}></i>
+//     </li>
+//   )
+// };
 export default Dashboard;

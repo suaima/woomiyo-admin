@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Collapse } from 'react-bootstrap';
+// import { Collapse } from 'react-bootstrap';
 import { Trans } from 'react-i18next';
 
 class Sidebar extends Component {
@@ -78,15 +78,15 @@ class Sidebar extends Component {
               <i className="mdi mdi-home menu-icon"></i>
             </Link>
           </li>
-          <li className={this.isPathActive('/voicemails') ? 'nav-item active' : 'nav-item'}>
-            <Link className="nav-link" to="/voicemails">
-              <span className="menu-title"><Trans>Voicemail</Trans></span>
+          <li className={this.isPathActive('/contact-list') ? 'nav-item active' : 'nav-item'}>
+            <Link className="nav-link" to="/contact-list">
+              <span className="menu-title"><Trans>Contacts</Trans></span>
               <i className="mdi mdi-home menu-icon"></i>
             </Link>
           </li>
-          <li className={this.isPathActive('/contact-list') ? 'nav-item active' : 'nav-item'}>
-            <Link className="nav-link" to="/contact-list">
-              <span className="menu-title"><Trans>Contact List</Trans></span>
+          {/* <li className={this.isPathActive('/voicemails') ? 'nav-item active' : 'nav-item'}>
+            <Link className="nav-link" to="/voicemails">
+              <span className="menu-title"><Trans>Voicemail</Trans></span>
               <i className="mdi mdi-home menu-icon"></i>
             </Link>
           </li>
@@ -217,7 +217,7 @@ class Sidebar extends Component {
               <span className="menu-title"><Trans>Documentation</Trans></span>
               <i className="mdi mdi-file-document-box menu-icon"></i>
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     );
