@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export class ContactListDelete extends Component {
-  constructor(props) {
+
+    constructor(props) {
     super(props);
   }
 
