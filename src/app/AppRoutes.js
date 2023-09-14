@@ -1,54 +1,47 @@
-import React, { Component, Suspense, lazy } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React, { Component, Suspense, lazy } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 
-import Spinner from '../app/shared/Spinner';
+import Spinner from "../app/shared/Spinner";
 
-const Dashboard = lazy(() => import('./dashboard/Dashboard'));
-const Contacts = lazy(() => import('./contactlist/Contacts'));
-const ContactList = lazy(() => import('./contactlist/ContactList'));
+const Dashboard = lazy(() => import("./dashboard/Dashboard"));
+const Contacts = lazy(() => import("./contactlist/Contacts"));
+const ContactsAdd = lazy(() => import("./contactlist/ContactsAdd"));
+const ContactList = lazy(() => import("./contactlist/ContactList"));
 
-// const Callback = lazy(() => import('./callback/Callback'));
+const Callback = lazy(() => import("./callback/Callback"));
 
-// const Voicemail = lazy(() => import('./voicemail/Voicemail'));
-// const ContactAdd = lazy(() => import('./contactlist/ContactAdd'));
+const Voicemail = lazy(() => import("./voicemail/Voicemail"));
+const ContactAdd = lazy(() => import("./contactlist/ContactAdd"));
 
-// const Parkedcall = lazy(() => import('./parkedcalls/Parkedcall'));
-// const Ticket = lazy(() => import('./tickets/Ticket'));
+const Parkedcall = lazy(() => import("./parkedcalls/Parkedcall"));
+const Ticket = lazy(() => import("./tickets/Ticket"));
 
-// const Recording = lazy(() => import('./recordings/Recording'));
+const Recording = lazy(() => import("./recordings/Recording"));
 
-// const QualityFeedback = lazy(() => import('./quality-feedback/QualityFeedback'));
+const QualityFeedback = lazy(() =>
+  import("./quality-feedback/QualityFeedback")
+);
 
+const Buttons = lazy(() => import("./basic-ui/Buttons"));
+const Dropdowns = lazy(() => import("./basic-ui/Dropdowns"));
+const Typography = lazy(() => import("./basic-ui/Typography"));
 
+const BasicElements = lazy(() => import("./form-elements/BasicElements"));
 
-// const Buttons = lazy(() => import('./basic-ui/Buttons'));
-// const Dropdowns = lazy(() => import('./basic-ui/Dropdowns'));
-// const Typography = lazy(() => import('./basic-ui/Typography'));
+const BasicTable = lazy(() => import("./tables/BasicTable"));
 
+const Mdi = lazy(() => import("./icons/Mdi"));
 
-// const BasicElements = lazy(() => import('./form-elements/BasicElements'));
+const ChartJs = lazy(() => import("./charts/ChartJs"));
 
-// const BasicTable = lazy(() => import('./tables/BasicTable'));
+const Error404 = lazy(() => import("./error-pages/Error404"));
+const Error500 = lazy(() => import("./error-pages/Error500"));
 
+const Login = lazy(() => import("./user-pages/Login"));
+const Register1 = lazy(() => import("./user-pages/Register"));
+const Lockscreen = lazy(() => import("./user-pages/Lockscreen"));
 
-
-
-// const Mdi = lazy(() => import('./icons/Mdi'));
-
-
-// const ChartJs = lazy(() => import('./charts/ChartJs'));
-
-// const Error404 = lazy(() => import('./error-pages/Error404'));
-// const Error500 = lazy(() => import('./error-pages/Error500'));
-
-// const Login = lazy(() => import('./user-pages/Login'));
-// const Register1 = lazy(() => import('./user-pages/Register'));
-// const Lockscreen = lazy(() => import('./user-pages/Lockscreen'));
-
-// const BlankPage = lazy(() => import('./general-pages/BlankPage'));
-
-
-
+const BlankPage = lazy(() => import("./general-pages/BlankPage"));
 
 class AppRoutes extends Component {
   render() {
@@ -58,42 +51,29 @@ class AppRoutes extends Component {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/contact-list" component={ContactList} />
           <Route exact path="/contacts" component={Contacts} />
-          {/* <Route exact path="/callbacks" component={Callback} />
+          <Route exact path="/contact-add" component={ContactsAdd} />
+          <Route exact path="/callbacks" component={Callback} />
           <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />
-
           <Route exact path="/tikets" component={Ticket} />
-
           <Route exact path="/recordings" component={Recording} />
-
           <Route exact path="/quality-feedback" component={QualityFeedback} />
-
           <Route path="/basic-ui/buttons" component={Buttons} />
           <Route path="/basic-ui/dropdowns" component={Dropdowns} />
           <Route path="/basic-ui/typography" component={Typography} />
-
-
-          <Route path="/form-Elements/basic-elements" component={BasicElements} />
-
+          <Route
+            path="/form-Elements/basic-elements"
+            component={BasicElements}
+          />
           <Route path="/tables/basic-table" component={BasicTable} />
-
-
           <Route path="/icons/mdi" component={Mdi} />
-
-
           <Route path="/charts/chart-js" component={ChartJs} />
-
-
           <Route path="/user-pages/login-1" component={Login} />
           <Route path="/user-pages/register-1" component={Register1} />
           <Route path="/user-pages/lockscreen" component={Lockscreen} />
-
           <Route path="/error-pages/error-404" component={Error404} />
           <Route path="/error-pages/error-500" component={Error500} />
-
-          <Route path="/general-pages/blank-page" component={BlankPage} /> */}
-
-
+          <Route path="/general-pages/blank-page" component={BlankPage} />
           <Redirect to="/dashboard" />
         </Switch>
       </Suspense>
