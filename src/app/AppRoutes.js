@@ -6,6 +6,7 @@ import Spinner from "../app/shared/Spinner";
 const Dashboard = lazy(() => import("./dashboard/Dashboard"));
 const Contacts = lazy(() => import("./contactlist/Contacts"));
 const ContactsAdd = lazy(() => import("./contactlist/ContactsAdd"));
+const ContactsEdit = lazy(() => import("./contactlist/ContactsEdit"));
 const ContactList = lazy(() => import("./contactlist/ContactList"));
 const ContactListAdd = lazy(() => import("./contactlist/ContactListAdd"));
 const ContactListView = lazy(() => import("./contactlist/ContactListView"));
@@ -54,12 +55,13 @@ class AppRoutes extends Component {
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/contacts" component={Contacts} />
-          <Route exact path="/contact-add" component={ContactsAdd} />
-          <Route exact path="/contact-list/:id" component={ContactList} />
-          <Route exact path="/contact-list-add" component={ContactListAdd} />
-          <Route exact path="/contact-list-edit" component={ContactListEdit} />
-          <Route exact path="/contact-list-view" component={ContactListView} />
-          <Route exact path="/contact-list-delete" component={ContactListDelete} />
+          <Route exact path="/contact/add" component={ContactsAdd} />
+          <Route exact path="/contact/:contactBookId/edit" component={ContactsEdit} />
+          <Route exact path="/contacts/:contactBookId" component={ContactList} />
+          <Route exact path="/contact-list/:id/add" component={ContactListAdd} />
+          <Route exact path="/contact-list/:id/edit" component={ContactListEdit} />
+          <Route exact path="/contact-list/:id/view" component={ContactListView} />
+          <Route exact path="/contact-list/:id/delete" component={ContactListDelete} />
           <Route exact path="/callbacks" component={Callback} />
           <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />
@@ -82,7 +84,7 @@ class AppRoutes extends Component {
           <Route path="/error-pages/error-404" component={Error404} />
           <Route path="/error-pages/error-500" component={Error500} />
           <Route path="/general-pages/blank-page" component={BlankPage} />
-          <Redirect to="/dashboard" />
+          <Redirect to="/contacts" />
         </Switch>
       </Suspense>
     );

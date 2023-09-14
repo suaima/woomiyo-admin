@@ -9,7 +9,7 @@ export class Contacts extends Component {
         <div className="page-header">
           <h3 className="page-title"> Contacts </h3>
           <nav aria-label="breadcrumb">
-            <Link className="btn btn-gradient-success" to="/contact-add">
+            <Link className="btn btn-gradient-success" to="/contact/add">
               New
             </Link>
           </nav>
@@ -36,9 +36,9 @@ export class Contacts extends Component {
                             <td> {data.name} </td>
                             <td> {data.contactCount} </td>
                             <td>
-                              <Link to={"/contact-list/"+data.contactBookId}>View contacts</Link> |{" "}
-                              <Link to="/">Edit</Link> |{" "}
-                              <Link to="/">Delete</Link>
+                              <Link to={"/contacts/"+data.contactBookId}>View contacts</Link> |{" "}
+                              <Link to={"/contacts/"+data.contactBookId+"/edit"}>Edit</Link> |{" "}
+                              <Link to={"/contacts/"+data.contactBookId+"/delete"}>Delete</Link>
                             </td>
                           </tr>
                         </>
