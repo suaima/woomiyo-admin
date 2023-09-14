@@ -40,7 +40,7 @@ function Contacts() {
       <div className="page-header">
         <h3 className="page-title"> Contacts </h3>
         <nav aria-label="breadcrumb">
-          <Link className="btn btn-gradient-success" to="/contact/add">
+          <Link className="btn btn-gradient-success" to="/contacts/add">
             New
           </Link>
         </nav>
@@ -72,10 +72,11 @@ function Contacts() {
                           <td> {data.name} </td>
                           <td> {data.contactCount} </td>
                           <td>
-                            <Link to={"/contacts/" + data.contactBookId}>
+                            <Link to={"/contact-list/" + data.contactBookId}>
                               <button
                                 type="button"
                                 className="btn btn-gradient-success btn-rounded btn-icon"
+                                title="Contact List"
                               >
                                 <i class="mdi mdi-contacts"></i>
                               </button>

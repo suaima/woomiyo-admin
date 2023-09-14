@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-
-export class ContactListAdd extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+import React from "react";
+// import { useNavigate } from 'react-router-dom';
+function ContactListAdd() {
+    // const navigate = useNavigate();
     return (
       <div>
         <div className="page-header">
           <h3 className="page-title"> Contacts </h3>
           <nav aria-label="breadcrumb">
-            <Link className="btn btn-gradient-success" to="/contact-list-add">
-              New
-            </Link>
+            <button
+              type="button"
+              className="btn btn-gradient-danger btn-rounded btn-icon"
+              title="Back"
+            //   onClick={() => navigate(-1)}
+            >
+              <i class="mdi mdi-undo-variant"></i>
+            </button>
           </nav>
         </div>
         <div className="row">
@@ -30,7 +30,6 @@ export class ContactListAdd extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default ContactListAdd;

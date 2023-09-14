@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
-import { Form } from 'react-bootstrap'
+import React, { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Form } from "react-bootstrap";
 
 export class ContactsEdit extends Component {
   render() {
@@ -20,30 +20,33 @@ export class ContactsEdit extends Component {
               <div className="card-body">
                 <form className="forms-sample">
                   <Form.Group>
-                    <label htmlFor="exampleInputUsername1">Contant Book Name</label>
+                    <label htmlFor="exampleInputUsername1">
+                      Contant Book Name
+                    </label>
                     <Form.Control
                       type="text"
                       id="exampleInputUsername1"
                       placeholder="** Like name to be Office Contact "
                       size="lg"
+                      value="New Name"
                     />
                   </Form.Group>
-
-                  <button
-                    type="submit"
-                    className="btn btn-info mr-2"
-                  >
-                    Add
-                  </button>
-                  <Link to="contacts" className="btn btn-light">Cancel</Link>
+                  <Link to="/contacts">
+                    <button type="submit" className="btn btn-info mr-2">
+                      Update
+                    </button>
+                  </Link>
+                  <Link to="/contacts" className="btn btn-light">
+                    Cancel
+                  </Link>
                 </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default ContactsEdit
+export default ContactsEdit;

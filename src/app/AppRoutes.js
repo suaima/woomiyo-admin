@@ -55,10 +55,10 @@ class AppRoutes extends Component {
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/contacts" component={Contacts} />
-          <Route exact path="/contact/add" component={ContactsAdd} />
-          <Route exact path="/contact/:contactBookId/edit" component={ContactsEdit} />
-          <Route exact path="/contacts/:contactBookId" component={ContactList} />
-          <Route exact path="/contact-list/:id/add" component={ContactListAdd} />
+          <Route exact path="/contacts/add" component={ContactsAdd} />
+          <Route exact path="/contacts/:contactBookId/edit" component={ContactsEdit} />
+          <Route exact path="/contact-list/:contactBookId" component={ContactList} />
+          <Route exact path="/contact-list/add" component={ContactListAdd} />
           <Route exact path="/contact-list/:id/edit" component={ContactListEdit} />
           <Route exact path="/contact-list/:id/view" component={ContactListView} />
           <Route exact path="/contact-list/:id/delete" component={ContactListDelete} />
