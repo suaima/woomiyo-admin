@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { ProgressBar } from 'react-bootstrap';
-
 export class QualityFeedback extends Component {
   render() {
     return (
@@ -9,7 +7,7 @@ export class QualityFeedback extends Component {
           <h3 className="page-title"> Quality </h3>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}></a></li>
+              <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}>{" "}</a></li>
               <li className="breadcrumb-item active" aria-current="page"></li>
             </ol>
           </nav>
@@ -32,24 +30,24 @@ export class QualityFeedback extends Component {
                     <tbody>
                       <tr>
                         <td className="py-1">
-                         
+
                         </td>
                         <td>  </td>
                         <td>
-                          
+
                         </td>
                         <td> </td>
                         <td>  </td>
                       </tr>
-                      
-                     
+
+
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     )

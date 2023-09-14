@@ -7,11 +7,15 @@ const Dashboard = lazy(() => import("./dashboard/Dashboard"));
 const Contacts = lazy(() => import("./contactlist/Contacts"));
 const ContactsAdd = lazy(() => import("./contactlist/ContactsAdd"));
 const ContactList = lazy(() => import("./contactlist/ContactList"));
+const ContactListAdd = lazy(() => import("./contactlist/ContactListAdd"));
+const ContactListView = lazy(() => import("./contactlist/ContactListView"));
+const ContactListEdit = lazy(() => import("./contactlist/ContactListEdit"));
+const ContactListDelete = lazy(() => import("./contactlist/ContactListDelete"));
 
 const Callback = lazy(() => import("./callback/Callback"));
 
 const Voicemail = lazy(() => import("./voicemail/Voicemail"));
-const ContactAdd = lazy(() => import("./contactlist/ContactAdd"));
+// const ContactAdd = lazy(() => import("./contactlist/ContactAdd"));
 
 const Parkedcall = lazy(() => import("./parkedcalls/Parkedcall"));
 const Ticket = lazy(() => import("./tickets/Ticket"));
@@ -49,9 +53,13 @@ class AppRoutes extends Component {
       <Suspense fallback={<Spinner />}>
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/contact-list" component={ContactList} />
           <Route exact path="/contacts" component={Contacts} />
           <Route exact path="/contact-add" component={ContactsAdd} />
+          <Route exact path="/contact-list/:id" component={ContactList} />
+          <Route exact path="/contact-list-add" component={ContactListAdd} />
+          <Route exact path="/contact-list-edit" component={ContactListEdit} />
+          <Route exact path="/contact-list-view" component={ContactListView} />
+          <Route exact path="/contact-list-delete" component={ContactListDelete} />
           <Route exact path="/callbacks" component={Callback} />
           <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />

@@ -9,7 +9,7 @@ export class BasicTable extends Component {
           <h3 className="page-title"> Voice mail </h3>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}></a></li>
+              <li className="breadcrumb-item"><a href="!#" onClick={event => event.preventDefault()}>{" "}</a></li>
               <li className="breadcrumb-item active" aria-current="page"></li>
             </ol>
           </nav>
@@ -113,7 +113,7 @@ export class BasicTable extends Component {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     )

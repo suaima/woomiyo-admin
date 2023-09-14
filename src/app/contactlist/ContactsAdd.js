@@ -31,9 +31,9 @@ export class ContactsAdd extends Component {
 
                   <button
                     type="submit"
-                    className="btn btn-gradient-info mr-2"
+                    className="btn btn-info mr-2"
                   >
-                    Submit
+                    Add
                   </button>
                   <Link to="contacts" className="btn btn-light">Cancel</Link>
                 </form>

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { ProgressBar } from "react-bootstrap";
-import dataObject from "../services/Contacts";
-import { Trans } from "react-i18next";
+import {ContactsData} from "../services/Contacts";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 export class Contacts extends Component {
   render() {
     return (
@@ -30,14 +29,14 @@ export class Contacts extends Component {
                       </tr>
                     </thead>
                     <tbody>
-                      {dataObject.list.map((data) => (
+                      {ContactsData.map((data) => (
                         <>
-                          <tr key={data.id}>
-                            <td className="py-1">{data.id}</td>
+                          <tr key={data.contactBookId}>
+                            <td className="py-1">{data.contactBookId}</td>
                             <td> {data.name} </td>
                             <td> {data.contactCount} </td>
                             <td>
-                              <Link to="/">View</Link> |{" "}
+                              <Link to={"/contact-list/"+data.contactBookId}>View contacts</Link> |{" "}
                               <Link to="/">Edit</Link> |{" "}
                               <Link to="/">Delete</Link>
                             </td>
