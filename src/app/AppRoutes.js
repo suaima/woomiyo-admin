@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Spinner from '../app/shared/Spinner';
 
 const Dashboard = lazy(() => import('./dashboard/Dashboard'));
+const Contacts = lazy(() => import('./contactlist/Contacts'));
 const ContactList = lazy(() => import('./contactlist/ContactList'));
 
 // const Callback = lazy(() => import('./callback/Callback'));
@@ -56,6 +57,7 @@ class AppRoutes extends Component {
         <Switch>
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/contact-list" component={ContactList} />
+          <Route exact path="/contacts" component={Contacts} />
           {/* <Route exact path="/callbacks" component={Callback} />
           <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />
