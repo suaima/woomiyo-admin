@@ -11,7 +11,6 @@ const ContactList = lazy(() => import("./contactlist/ContactList"));
 const ContactListAdd = lazy(() => import("./contactlist/ContactListAdd"));
 const ContactListView = lazy(() => import("./contactlist/ContactListView"));
 const ContactListEdit = lazy(() => import("./contactlist/ContactListEdit"));
-const ContactListDelete = lazy(() => import("./contactlist/ContactListDelete"));
 
 const Callback = lazy(() => import("./callback/Callback"));
 
@@ -57,11 +56,10 @@ class AppRoutes extends Component {
           <Route exact path="/contacts" component={Contacts} />
           <Route exact path="/contacts/add" component={ContactsAdd} />
           <Route exact path="/contacts/:contactBookId/edit" component={ContactsEdit} />
-          <Route exact path="/contact-list/:contactBookId" component={ContactList} />
-          <Route exact path="/contact-list/add" component={ContactListAdd} />
-          <Route exact path="/contact-list/:id/edit" component={ContactListEdit} />
-          <Route exact path="/contact-list/:id/view" component={ContactListView} />
-          <Route exact path="/contact-list/:id/delete" component={ContactListDelete} />
+          <Route exact path="/contacts/:contactBookId/list" component={ContactList} />
+          <Route exact path="/contacts/:contactBookId/list/add" component={ContactListAdd} />
+          <Route exact path="/contacts/:contactBookId/list/:id/edit" component={ContactListEdit} />
+          <Route exact path="/contacts/:contactBookId/list/:id/view" component={ContactListView} />
           <Route exact path="/callbacks" component={Callback} />
           <Route exact path="/voicemails" component={Voicemail} />
           <Route exact path="/parkedcalls" component={Parkedcall} />

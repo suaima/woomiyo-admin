@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ContactListData } from "../services/Contacts";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import DeleteConfirmation from "../basic-ui/DeleteConfirmation";
@@ -6,12 +6,12 @@ import { Alert } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 
 function ContactList() {
-  const [tempContactListData, setTempContactListData] = useState(null);
-  const [type, setType] = useState(null);
-  const [id, setId] = useState(null);
+
   const [displayConfirmationModal, setDisplayConfirmationModal] =
     useState(false);
   const [deleteMessage, setDeleteMessage] = useState(null);
+  //use useParams 
+
   const params = useParams()
 
   // deleteSubmit
@@ -39,7 +39,7 @@ function ContactList() {
       <div className="page-header">
         <h3 className="page-title"> Contact List </h3>
         <nav aria-label="breadcrumb">
-          <Link className="btn btn-gradient-success" to={"/contact-list/"+params.contactBookId+"/add"}>
+          <Link className="btn btn-gradient-success" to={"/contacts/" + params.contactBookId + "/list/add"}>
             New
           </Link>
           <Link to="/contacts">
@@ -92,16 +92,16 @@ function ContactList() {
                               ")"}
                           </td>
                           <td>
-                            <Link to={"/contact-list/" + data.id + "/view"}>
+                            <Link to={"/contacts/" + params.contactBookId + "/list/" + data.id + "/view"}>
                               <button
                                 type="button"
                                 className="btn btn-gradient-success btn-rounded btn-icon"
-                                title="Contact List"
+                                title="Contact Info"
                               >
                                 <i class="mdi mdi-eye"></i>
                               </button>
                             </Link>
-                            <Link to={"/contact-list/" + data.id + "/edit"}>
+                            <Link to={"/contacts/" + params.contactBookId + "/list/" + data.id + "/edit"}>
                               <button
                                 type="button"
                                 className="btn btn-gradient-info btn-rounded btn-icon"
